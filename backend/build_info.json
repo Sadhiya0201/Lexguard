@@ -1,0 +1,120 @@
+{
+  "artifacts": {
+    "images": [
+      "us-central1-docker.pkg.dev/peppy-goods-496606-r6/cloud-run-source-deploy/lexguard-backend:latest"
+    ]
+  },
+  "createTime": "2026-05-17T11:06:04.870121418Z",
+  "finishTime": "2026-05-17T11:07:10.998956Z",
+  "id": "b60fa228-17e1-43ec-a0f6-d279addae3e7",
+  "images": [
+    "us-central1-docker.pkg.dev/peppy-goods-496606-r6/cloud-run-source-deploy/lexguard-backend:latest"
+  ],
+  "logUrl": "https://console.cloud.google.com/cloud-build/builds;region=us-central1/b60fa228-17e1-43ec-a0f6-d279addae3e7?project=176656025300",
+  "name": "projects/176656025300/locations/us-central1/builds/b60fa228-17e1-43ec-a0f6-d279addae3e7",
+  "options": {
+    "logStreamingOption": "STREAM_OFF",
+    "logging": "CLOUD_LOGGING_ONLY",
+    "pool": {}
+  },
+  "projectId": "peppy-goods-496606-r6",
+  "queueTtl": "360s",
+  "results": {
+    "buildStepImages": [
+      "sha256:26b8fc76be1fbbf478fff90fd3ea11557ee5016339bc8931180d8576cc365c5d"
+    ],
+    "buildStepOutputs": [
+      ""
+    ]
+  },
+  "serviceAccount": "projects/peppy-goods-496606-r6/serviceAccounts/176656025300-compute@developer.gserviceaccount.com",
+  "source": {
+    "storageSource": {
+      "bucket": "run-sources-peppy-goods-496606-r6-us-central1",
+      "generation": "1779015963047620",
+      "object": "services/lexguard-backend/1779015950.574545-8f6bc02349bc4434b7efe5434e0a00df.zip"
+    }
+  },
+  "sourceProvenance": {
+    "fileHashes": {
+      "gs://run-sources-peppy-goods-496606-r6-us-central1/services/lexguard-backend/1779015950.574545-8f6bc02349bc4434b7efe5434e0a00df.zip#1779015963047620": {
+        "fileHash": [
+          {
+            "type": "MD5",
+            "value": "X_Vi5kSQpGEeaTB8-KT4oQ=="
+          },
+          {
+            "type": "SHA256",
+            "value": "JKhD0t4G0pvqPYKA6rO54mtHu48x7PSKbDm9gCEQP9k="
+          }
+        ]
+      }
+    },
+    "resolvedStorageSource": {
+      "bucket": "run-sources-peppy-goods-496606-r6-us-central1",
+      "generation": "1779015963047620",
+      "object": "services/lexguard-backend/1779015950.574545-8f6bc02349bc4434b7efe5434e0a00df.zip"
+    }
+  },
+  "startTime": "2026-05-17T11:06:05.469676937Z",
+  "status": "FAILURE",
+  "steps": [
+    {
+      "args": [
+        "build",
+        "--network",
+        "cloudbuild",
+        "--no-cache",
+        "-t",
+        "us-central1-docker.pkg.dev/peppy-goods-496606-r6/cloud-run-source-deploy/lexguard-backend:latest",
+        ".",
+        "--label",
+        "google.build_id=b60fa228-17e1-43ec-a0f6-d279addae3e7",
+        "--label",
+        "google.source=gs://run-sources-peppy-goods-496606-r6-us-central1/services/lexguard-backend/1779015950.574545-8f6bc02349bc4434b7efe5434e0a00df.zip#1779015963047620"
+      ],
+      "id": "run-docker-build",
+      "name": "gcr.io/cloud-builders/docker",
+      "pullTiming": {
+        "endTime": "2026-05-17T11:06:14.720231493Z",
+        "startTime": "2026-05-17T11:06:14.711165458Z"
+      },
+      "status": "SUCCESS",
+      "timing": {
+        "endTime": "2026-05-17T11:06:34.056846138Z",
+        "startTime": "2026-05-17T11:06:14.711165458Z"
+      }
+    }
+  ],
+  "tags": [
+    "p-run",
+    "r-docker",
+    "bt-DOCKER",
+    "service_lexguard-backend"
+  ],
+  "timeout": "1800s",
+  "timing": {
+    "BUILD": {
+      "endTime": "2026-05-17T11:06:34.087599673Z",
+      "startTime": "2026-05-17T11:06:14.116477887Z"
+    },
+    "FETCHSOURCE": {
+      "endTime": "2026-05-17T11:06:14.116408522Z",
+      "startTime": "2026-05-17T11:06:09.370282131Z"
+    },
+    "PUSH": {
+      "endTime": "2026-05-17T11:06:59.829897244Z",
+      "startTime": "2026-05-17T11:06:34.087658631Z"
+    },
+    "STORAGE_SOURCE": {
+      "endTime": "2026-05-17T11:06:14.116408522Z",
+      "startTime": "2026-05-17T11:06:09.370282131Z"
+    }
+  },
+  "warnings": [
+    {
+      "priority": "INFO",
+      "text": "The service account running this build projects/peppy-goods-496606-r6/serviceAccounts/176656025300-compute@developer.gserviceaccount.com does not have permission to write logs to Cloud Logging. To fix this, grant the Logs Writer (roles/logging.logWriter) role to the service account."
+    }
+  ]
+}
